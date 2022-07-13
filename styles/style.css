@@ -274,8 +274,6 @@ body {
 
 .photo-block {
   grid-column: 2/4;
-  background: no-repeat url("../images/advantages/city-photo.jpeg");
-  background-size: cover
 }
 
 .first-block {
@@ -342,6 +340,16 @@ body {
   text-align: center;
 }
 
+.about-motel {
+  padding: 0 30px;
+}
+
+.advantages-image {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .picture-home::before {
   content: "";
   position: absolute;
@@ -368,17 +376,16 @@ body {
   top: 0;
   left: 77px;
   width: 75px;
-  height: 72px;
-  background: no-repeat 0 0 url("../images/advantages/food-icon.svg");
+  height: 78px;
+  background: no-repeat 0 0 url("../images/advantages/gift-icon.svg");
 }
 
-.second-block,
-.fourth-block {
+.real-city_item:nth-child(odd):not(:first-child) {
   padding: 80px 85px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.third-block {
+.real-city_item:nth-child(even):not(:nth-child(2)) {
   padding: 80px 85px;
   background-color: #ffffff;
 }
@@ -396,6 +403,16 @@ body {
   padding: 0;
 }
 
+.another-advantages-item:nth-child(odd):not(:first-child) {
+  padding: 103px 85px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.another-advantages-item:nth-child(even):not(:nth-child(2)) {
+  padding: 103px 85px;
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
 .block-photo {
   grid-column: 1/3;
   background: no-repeat url("../images/advantages/canyon.jpeg");
@@ -407,20 +424,10 @@ body {
 }
 
 .block-one {
-  padding: 92px 85px;
   background-color: #82b3d3;
+  padding: 92px 85px;
 }
 
-.block-two,
-.block-four {
-  padding: 103px 85px;
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.block-three {
-  padding: 103px 85px;
-  background-color: rgba(131, 179, 211, 0.2);
-}
 
 
 /* -----search---- */
@@ -505,22 +512,24 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.6);
-  background-color: inherit;
+  border-radius: 10px 0 0 10px;
 }
 
 .field:hover {
   outline: none;
   background-color: #dcdcdc;
+  border-radius: 10px 0 0 10px;
 }
 
 .field:focus {
   outline: 3px solid #68a2ca;
+  border-radius: 10px 0 0 10px;
 }
 
 .field:disabled,
 .newsletter-button:disabled {
   opacity: 0.3;
+  border-radius: 10px 0 0 10px;
 }
 
 .field-error {
@@ -1590,6 +1599,7 @@ body {
   height: 50px;
   width: 100%;
   padding-left: 20px;
+  color: #000000;
   background-color: #f0f0f0;
   border: none;
   font-size: 16px;
@@ -1599,12 +1609,12 @@ body {
 }
 
 .auth-form-field::placeholder {
-  background-color: inherit;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #000000;
+  opacity: 1;
 }
 
 .auth-form-field:hover {
@@ -1673,7 +1683,6 @@ body {
   left: 225px;
   display: block;
   color: #000000;
-
 }
 
 .auth-form-error-text {
